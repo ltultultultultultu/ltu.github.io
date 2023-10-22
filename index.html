@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保健11</title>
+    <link rel="stylesheet" href="clas.css">
+    <link href="./UDDigiKyokashoN-B.ttc">
+</head>
+
+<body>
+    <!--    ヘッダー    -->
+    <header>
+        <h1>三択クイズ</h1>
+    </header>
+
+    <section class="container">
+        <!--    右にずっとおるやつ    -->
+        <section class="sub-container">
+            <div id="fixed-element"><span class="response">回答状況</span>
+                <div class="pro1">問題1.</div>
+                <div class="pro2">問題2.</div>
+                <div class="pro3">問題3.</div>
+                <div class="pro4">問題4.</div>
+                <div class="pro5">問題5.</div>
+                <div class="pro6">問題6.</div>
+                <div class="pro7">問題7.</div>
+                <div class="pro8">問題8.</div>
+                <span onclick="jump()" class="blue">未回答の問題へ</span>
+            </div>
+        </section>
+
+        <section class="main-container">
+            <section class="explanation">
+                <h2>本日の内容に関するクイズとなっています。(^_^)<br>選択肢の中から選んで「回答する」を押してください。全8問です。<br>※横画面推奨です。</h2>
+            </section>
+
+            <!--    クイズ一つ目    -->
+            <section class="quiz">
+                <div id="quiz_1">
+                    <h2>Q1.睡眠にはレム睡眠とノンレム睡眠の二種類があると言われています。レム睡眠の特徴とは？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer1" value="A">A. 脳が休息している</li>
+                        <li><input type="radio" name="answer1" value="B">B. 夢をよく見る</li>
+                        <li><input type="radio" name="answer1" value="C">C. 人間にはみられない</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer1')">回答する</button>
+                </div>
+                <div id="result1"></div>
+            </section>
+
+            <!--    クイズ二つ目    -->
+            <section class="quiz">
+                <div id="quiz_2">
+                    <h2>Q2.長時間労働では、きょ血性心疾患や脳血管疾患などに罹りやすくなるといわれている。「きょ」の漢字として適するものは？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer2" value="D">D. <span class="bold2">虞</span></li>
+                        <li><input type="radio" name="answer2" value="E">E. <span class="bold2">虚</span></li>
+                        <li><input type="radio" name="answer2" value="F">F. <span class="bold2">虜</span></li>
+                    </ul>
+                    <button onclick="checkAnswer('answer2')">回答する</button>
+                </div>
+                <div id="result2"></div>
+            </section>
+
+            <!--    クイズ三つ目    -->
+            <section class="quiz">
+                <div id="quiz_3">
+                    <h2>Q3.生活習慣病として<span class="emphasis">適していない</span>ものはどれか？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer3" value="G">G. 糖尿病</li>
+                        <li><input type="radio" name="answer3" value="H">H. 慢性腎不全</li>
+                        <li><input type="radio" name="answer3" value="I">I. 骨折</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer3')">回答する</button>
+                </div>
+                <div id="result3"></div>
+            </section>
+
+            <!--    クイズ四つ目    -->
+            <section class="quiz">
+                <div id="quiz_4">
+                    <h2>Q4.生活習慣病にかかりやすい理由として睡眠時間が短いことが挙げられる。その理由とは？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer4" value="J">J. ラ・ヨダソウ・スティアーナ現象がおこり、脳に異常が生じるから。</li>
+                        <li><input type="radio" name="answer4" value="K">K. 血糖値の変動が小さくなり、神経系の乱れが生じるから。</li>
+                        <li><input type="radio" name="answer4" value="L">L. 睡眠不足だと、ホルモンの作用で食事摂取量が増えるから。</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer4')">回答する</button>
+                </div>
+                <div id="result4"></div>
+            </section>
+
+            <!--    クイズ五つ目    -->
+            <section class="quiz">
+                <div id="quiz_5">
+                    <h2>Q5.不眠症の説明として<span class="emphasis">適していない</span>ものはどれか？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer5" value="M">M. 早朝に目が覚めて困る。</li>
+                        <li><input type="radio" name="answer5" value="N">N. 睡眠時間が4時間未満の日が1週間のうち4日以上で認められる。</li>
+                        <li><input type="radio" name="answer5" value="O">O. うつ病の患者に高頻度で認められる。</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer5')">回答する</button>
+                </div>
+                <div id="result5"></div>
+            </section>
+
+            <!--    クイズ六つ目    -->
+            <section class="quiz">
+                <div id="quiz_6">
+                    <h2>Q6.睡眠時間の特徴として秋から冬にかけて長くなることが挙げられる。正しい文はどれ？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer6" value="P">P. 寒くなり体が回復しにくいから。</li>
+                        <li><input type="radio" name="answer6" value="Q">Q. 空気が乾燥し、水分が失われやすいから。</li>
+                        <li><input type="radio" name="answer6" value="R">R. 日照時間が少ないうえに、光量も少ないから。</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer6')">回答する</button>
+                </div>
+                <div id="result6"></div>
+            </section>
+
+            <!--    クイズ七つ目    -->
+            <section class="quiz">
+                <div id="quiz_7">
+                    <h2>Q7.国が公表している「健康づくりのための睡眠指針」に関する問題である。<span class="emphasis">適していない</span>ものはどれか？</h2>
+                    <ul>
+                        <li><input type="radio" name="answer7" value="S">S. 2016年に厚労省が策定した。</li>
+                        <li><input type="radio" name="answer7" value="T">T. 「眠くなってから寝床に入る」との記載がある。</li>
+                        <li><input type="radio" name="answer7" value="U">U. 「若年世代は夜更かしを避ける」との記載がある。</li>
+                    </ul>
+                    <button onclick="checkAnswer('answer7')">回答する</button>
+                </div>
+                <div id="result7"></div>
+            </section>
+
+            <!--    クイズ八つ目    -->
+            <section class="quiz">
+                <div id="quiz_8">
+                    <h2>Q8.労働時間が増加すると睡眠時間などが短くなる。そこで、労働基準法で長時間労働の防止や、有給休暇取得を推奨している。下表は、主な国の就業者1人当たり年間労働時間と観光者到着数等に関する統計(いずれも2018年)である。次のうち日本にあてはまるものはどれか？</h2>
+                    <div class="pngProblem8">
+                        <img src="./table.png" alt="問題の表。読み込み失敗……" class="pngProblem8">
+                        <div class="overlay"></div>
+                    </div>
+                    <ul class="problem8">
+                        <li class="differentDirections"><input type="radio" name="answer8" value="V">V </li>
+                        <li class="differentDirections"><input type="radio" name="answer8" value="W">W </li>
+                        <li class="differentDirections"><input type="radio" name="answer8" value="X">X </li>
+                        <li class="differentDirections"><input type="radio" name="answer8" value="Y">Y </li>
+                        <li class="differentDirections"><input type="radio" name="answer8" value="Z">Z </li>
+                    </ul>
+                    <button onclick="checkAnswer('answer8')">回答する</button>
+                </div>
+                <div id="result8"></div>
+            </section>
+
+            <!--    終わりの言葉    -->
+            <section class="resultAll" id="Result">
+                <h2>お疲れ様でした！<br>100点中、<span id="score"></span> 点です。</h2>
+                <h2>最後まで遊んでいただきありがとうございます。</h2>
+                <h2 onclick="messageSpe()" class="blue" id="special">???</h2>
+            </section>
+        </section>
+    </section>
+
+    <script src="clas.js"></script>
+</body>
+</html>
